@@ -11,9 +11,10 @@
   <img src="https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/DeepSeek-V4-536DFE?logo=openai" alt="DeepSeek" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
+  <img src="https://img.shields.io/badge/author-大二学生-ff69b4?logo=github" alt="Sophomore" />
 </p>
 
-**写作 × AI × 知识沉淀 —— 让每一次技术踩坑都变成可检索的经验资产**
+> 🎓 **一名大二学生独立完成的个人项目** —— 写作 × AI × 知识沉淀，让每一次技术踩坑都变成可检索的经验资产
 
 </div>
 
@@ -97,8 +98,8 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/xiabiqing/Blog.git
-cd Blog
+git clone https://github.com/xiabiqing/ai-knowledge-blog.git
+cd ai-knowledge-blog
 ```
 
 ### 2. 启动后端
@@ -204,5 +205,5 @@ MIT © [xiabiqing](https://github.com/xiabiqing)
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by xiabiqing · Powered by DeepSeek & Spring AI</sub>
+  <sub>👨‍💻 一名大二学生用 Java + React 独立开发 · Powered by DeepSeek & Spring AI</sub>
 </div>

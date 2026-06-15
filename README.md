@@ -16,6 +16,12 @@
 
 > 🎓 **一名大二学生独立完成的个人项目** —— 写作 × AI × 知识沉淀，让每一次技术踩坑都变成可检索的经验资产
 
+<div align="center">
+
+`Spring Boot 3` `Spring AI` `DeepSeek` `React 19` `Tailwind CSS` `Agent` `AI Blog` `Knowledge Base` `ElasticSearch` `Kafka` `Minio` `MyBatis Plus` `Function Calling` `智能博客` `知识库` `AI写作` `大模型` `全栈` `Java` `TypeScript` `大学生项目` `个人博客` `经验管理` `Agent发布`
+
+</div>
+
 </div>
 
 ---
@@ -84,6 +90,16 @@
 
 ---
 
+## 🔥 项目亮点
+
+- 🧠 **AI 驱动全流程** — Spring AI + DeepSeek + Agent Function Calling，AI 贯穿文章撰写、经验提取、知识沉淀全链路
+- 🔍 **ElasticSearch 全文检索** — 毫秒级搜索你的技术经验和文章
+- 📡 **Kafka 异步消息** — 高并发场景下保证流畅体验，经验异步入库不阻塞主流程
+- 🤖 **Agent 智能体** — 对话式引导发布，让 AI 帮你写出高质量技术博客
+- 🚀 **一键启动** — 首次启动自动建表建索引，无需手动导入 SQL
+
+---
+
 ## 🚀 快速开始
 
 ### 环境要求
@@ -107,15 +123,16 @@ cd ai-knowledge-blog
 ```bash
 cd BlogBacked
 
-# 初始化数据库（执行 src/main/java/fun/xiabiqing/sql/Initialization.sql）
-# 配置环境变量
+# 只需配好环境变量，其他都自动搞定
 export MYSQL_USERNAME=root
 export MYSQL_PASSWORD=your_password
 export DEEPSEEK_API_KEY=sk-your-deepseek-api-key
 
-# 启动
+# 启动 — 首次运行自动建表 + 建 ES 索引，无需手动导入 SQL！
 ./mvnw spring-boot:run
 ```
+
+> ⚡ **首次启动提示**：`ProjectInitRunner` 会自动执行 MySQL 建表语句和 ElasticSearch 索引创建，你只需要确保 MySQL 和 ES 服务在运行即可，完全零手工。
 
 后端启动后访问：
 - API 服务：http://localhost:8080

@@ -1,0 +1,6 @@
+{
+  "name": "极简 AI 博客",
+  "description": "极简风格的博客前端，包含文章展示、知识库和 Agent 辅助发布界面。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

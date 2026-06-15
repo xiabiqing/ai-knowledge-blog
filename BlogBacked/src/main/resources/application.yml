@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: Blog
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:your_mysql_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    date-format: yyyy-MM-dd HH:m:ss
+    time-zone: GMT+8
+  ai:
+    openai:
+      # 💡 如果用的是国内兼容 OpenAI 格式的镜像站（如 DeepSeek），在此处配置中转 BaseUrl
+      base-url:  https://api.deepseek.com
+      chat:
+        options:
+          # 指定调用的模型名称
+          model: deepseek-v4-pro
+      api-key: ${DEEPSEEK_API_KEY:your_deepseek_api_key}
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      # 消息重试次数
+      retries: 3
+      # 消息序列化方式（发给 Kafka 的格式）
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      # 消费者组 ID（随便起，代表你的博客后端集群）
+      group-id: blog-knowledge-group
+      # 当 Kafka 中没有初始偏移量或偏移量超出范围时的处理：最早
+      auto-offset-reset: earliest
+      # 接收消息的反序列化方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*" # 允许反序列化所有的包
+
+knife4j:
+  setting:
+    language: zh_cn
+  enable: true

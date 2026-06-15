@@ -1,0 +1,28 @@
+# Claude Command Suite (tool, not project code)
+.claude/
+
+# Build output
+target/
+*/target/
+dist/
+*/dist/
+build/
+*/build/
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local

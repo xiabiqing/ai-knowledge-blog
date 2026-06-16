@@ -16,6 +16,8 @@
 
 > 🎓 **一名大二学生独立完成的个人项目** —— 写作 × AI × 知识沉淀，让每一次技术踩坑都变成可检索的经验资产
 
+🌐 **线上原型已部署**：**[http://1.14.162.87](http://1.14.162.87)** 欢迎访问体验！
+
 <div align="center">
 
 `Spring Boot 3` `Spring AI` `DeepSeek` `React 19` `Tailwind CSS` `Agent` `AI Blog` `Knowledge Base` `ElasticSearch` `Kafka` `Minio` `MyBatis Plus` `Function Calling` `智能博客` `知识库` `AI写作` `大模型` `全栈` `Java` `TypeScript` `大学生项目` `个人博客` `经验管理` `Agent发布`

@@ -81,12 +81,15 @@
 |------|------|------|
 | **前端** | React 19 + Vite + Tailwind CSS 4 | 响应式设计，日式自然色系 |
 | **后端** | Spring Boot 3.5 + Java 17 | RESTful API，全局异常处理 |
-| **AI** | Spring AI + DeepSeek V4 | 文章自动补全 + Agent 对话 |
-| **数据库** | MySQL 8.0 + MyBatis Plus | 文章、知识库持久化存储 |
+| **AI** | Spring AI + DeepSeek V4 | 文章自动补全 + Agent Function Calling |
+| **数据库** | MySQL 8.0 + MyBatis Plus | 文章、知识库、会话持久化存储 |
 | **搜索引擎** | ElasticSearch | 知识库全文检索 |
 | **消息队列** | Kafka | 异步经验提取入库 |
 | **对象存储** | Minio | 上传文件存储 |
-| **文档** | Knife4j | 自动生成 API 文档 |
+| **OCR** | Tess4J 5.11（内置 Tesseract 5.3.4） | 图片文字识别，DLL 已打包无需额外安装 |
+| **PDF 解析** | PDFBox 3.0 | PDF 文件内容提取 |
+| **认证** | JJWT | JWT 令牌管理 |
+| **文档** | Knife4j 4.4 | 自动生成 API 文档 |
 
 ---
 
@@ -107,9 +110,10 @@
 - **JDK 17+**
 - **Node.js 18+**
 - **MySQL 8.0+**
-- **ElasticSearch 7.x+**
-- **Kafka 3.x+**
-- **Minio**（可选，用于文件上传）
+- **ElasticSearch 7.x+**（默认 `localhost:9200`）
+- **Kafka 3.x+**（默认 `localhost:9092`）
+- **Minio**（可选，默认 `localhost:9000`，账号密码 `minioadmin/minioadmin`）
+- **Tesseract OCR**：**无需单独安装** — Tess4J 5.11 已内置 Tesseract 5.3.4 的 Windows DLL（32 位和 64 位均包含），中文/英文训练数据已放在 `BlogBacked/tessdata/` 目录下
 
 ### 1. 克隆项目
 
@@ -160,8 +164,22 @@ npm run dev
 |------|------|--------|
 | `MYSQL_USERNAME` | MySQL 用户名 | `root` |
 | `MYSQL_PASSWORD` | MySQL 密码 | - |
-| `DEEPSEEK_API_KEY` | DeepSeek API Key | - |
-| `GEMINI_API_KEY` | Gemini API Key（前端） | - |
+| `DEEPSEEK_API_KEY` | DeepSeek API Key（后端 AI） | - |
+| `GEMINI_API_KEY` | Gemini API Key（前端可选） | - |
+
+**Minio 配置**（在 `application.yml` 中，一般无需修改）：
+| 配置项 | 默认值 | 说明 |
+|--------|--------|------|
+| `minio.endpoint` | `localhost` | Minio 服务地址 |
+| `minio.port` | `9000` | Minio API 端口 |
+| `minio.access-key` | `minioadmin` | Minio 访问密钥 |
+| `minio.secret-key` | `minioadmin` | Minio 密钥 |
+
+### 5. Maven 配置
+
+项目依赖 `Spring AI` 里程碑版本，已在 `pom.xml` 中配置 Spring Milestones 仓库，无需额外配置。国内用户如 Maven 下载慢，可在 `~/.m2/settings.xml` 中配置阿里云镜像。
+
+
 
 ---
 

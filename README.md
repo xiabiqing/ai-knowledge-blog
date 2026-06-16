@@ -187,21 +187,23 @@ npm run dev
 
 ## 📸 功能预览
 
-### 文章管理
+### 文章发布 & 文章列表
 
-| 文章列表 | 文章详情 |
+| 文章发布 | 文章列表 |
 |----------|----------|
-| ![文章列表](screenshots/article-list.png) | ![文章详情](screenshots/article-detail.png) |
+| ![文章发布](screenshots/article-publish.png) | ![文章列表](screenshots/article-list.png) |
 
-### 知识库
+### 文章详情
 
-![知识库](screenshots/knowledge-base.png)
+| 缩略版 | 放大版 |
+|--------|--------|
+| ![文章详情缩略](screenshots/article-detail-compact.png) | ![文章详情放大](screenshots/article-detail-full.png) |
 
-### Agent 智能发布
+### 知识库 & Agent 智能体
 
-| 步骤一 | 步骤二 | 步骤三 |
-|--------|--------|--------|
-| ![Agent发布1](screenshots/agent-publish-1.png) | ![Agent发布2](screenshots/agent-publish-2.png) | ![Agent发布3](screenshots/agent-publish-3.png) |
+| 知识库 | Agent 智能体 |
+|--------|-------------|
+| ![知识库](screenshots/knowledge-base.png) | ![Agent智能体](screenshots/agent-publish.png) |
 
 ---
 

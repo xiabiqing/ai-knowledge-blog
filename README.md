@@ -191,7 +191,7 @@ npm run dev
 
 | 文章发布 | 文章列表 |
 |----------|----------|
-| ![文章发布](screenshots/article-list.png) | ![文章列表](screenshots/article-list.png) |
+| ![文章发布](screenshots/article-publish.png) | ![文章列表](screenshots/article-list.png) |
 
 ### 文章详情
 

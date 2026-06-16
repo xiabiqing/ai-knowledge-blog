@@ -187,12 +187,21 @@ npm run dev
 
 ## 📸 功能预览
 
-| 功能 | 截图 |
-|------|------|
-| **文章列表** | 分页浏览所有文章，按更新时间排序 |
-| **文章管理** | 上传文件 → AI 自动生成标题/描述/经验 |
-| **知识库** | 按类型/频率/评分检索，支持 ES 全文搜索 |
-| **Agent 发布** | 对话式引导，自动生成结构化文章 |
+### 文章管理
+
+| 文章列表 | 文章详情 |
+|----------|----------|
+| ![文章列表](screenshots/article-list.png) | ![文章详情](screenshots/article-detail.png) |
+
+### 知识库
+
+![知识库](screenshots/knowledge-base.png)
+
+### Agent 智能发布
+
+| 步骤一 | 步骤二 | 步骤三 |
+|--------|--------|--------|
+| ![Agent发布1](screenshots/agent-publish-1.png) | ![Agent发布2](screenshots/agent-publish-2.png) | ![Agent发布3](screenshots/agent-publish-3.png) |
 
 ---
 
